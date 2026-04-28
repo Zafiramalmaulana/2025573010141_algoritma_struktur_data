@@ -5,20 +5,15 @@ function hitungKompleksitas(n, fn) {
   console.log(`Waktu eksekusi untuk n=${n}: ${end - start} ms`);
 }
 
-// ==============================
 // Fungsi A
-// ==============================
-// Hanya melakukan 1 operasi (perkalian)
-// Tidak tergantung pada n (konstan)
 function fnA(n) {
   return n * 2;
 }
 // Big O: O(1)
 // Alasan: Operasi tetap, tidak bertambah walaupun n besar
 
-// ==============================
 // Fungsi B
-// ==============================
+
 // Nested loop (2 lapis)
 function fnB(n) {
   for (let i = 0; i < n; i++) {
@@ -30,10 +25,7 @@ function fnB(n) {
 // Big O: O(n^2)
 // Alasan: Loop dalam loop → n * n = n²
 
-// ==============================
 // Fungsi C
-// ==============================
-
 function fnC(n) {
   for (let i = 1; i < n; i *= 2) {
     console.log(i);
@@ -42,10 +34,7 @@ function fnC(n) {
 // Big O: O(log n)
 // Alasan: Pertumbuhan eksponensial (1 → 2 → 4 → 8 ...)
 
-// ==============================
 // Fungsi D
-// ==============================
-
 function fnD(n) {
   const arr = Array.from({ length: n }, (_, i) => i);
 
@@ -59,10 +48,6 @@ function fnD(n) {
 }
 // Big O: O(n^3)
 // Alasan: 3 loop bersarang → n * n * n = n³
-
-// ==============================
-// TESTING (n = 1000)
-// ==============================
 
 const n = 1000;
 
